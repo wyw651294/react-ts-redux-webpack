@@ -1,6 +1,10 @@
+//定义一些常量供action和reducer使用
 export const INCREMENT_ENTHUSIASM = 'INCREMENT_ENTHUSIASM';
 export type INCREMENT_ENTHUSIASM = typeof INCREMENT_ENTHUSIASM;
 
 
 export const DECREMENT_ENTHUSIASM = 'DECREMENT_ENTHUSIASM';
 export type DECREMENT_ENTHUSIASM = typeof DECREMENT_ENTHUSIASM;
+
+export const ADD_COIN = 'ADD_COIN';
+export type ADD_COIN = typeof ADD_COIN;

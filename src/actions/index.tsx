@@ -8,7 +8,11 @@ export interface DecrementEnthusiasm {
   type: constants.DECREMENT_ENTHUSIASM;
 }
 
-export type EnthusiasmAction = IncrementEnthusiasm | DecrementEnthusiasm;
+export interface ADD_COIN {
+  type: constants.ADD_COIN;
+}
+
+export type EnthusiasmAction = IncrementEnthusiasm | DecrementEnthusiasm | ADD_COIN;
 
 export function incrementEnthusiasm(): IncrementEnthusiasm {
   return {
@@ -19,5 +23,11 @@ export function incrementEnthusiasm(): IncrementEnthusiasm {
 export function decrementEnthusiasm(): DecrementEnthusiasm {
   return {
     type: constants.DECREMENT_ENTHUSIASM
+  }
+}
+
+export function addCoin(): ADD_COIN {
+  return {
+    type: constants.ADD_COIN
   }
 }

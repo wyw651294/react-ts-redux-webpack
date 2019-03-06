@@ -1,4 +1,6 @@
+// 初始默认数据
 export default {
   enthusiasmLevel: 1,
-  languageName: "TypeScript"
+  languageName: "TypeScript",
+  coin: 1,
 };

@@ -4,8 +4,10 @@ const style = require('./hello.css');
 export interface Props {
   name: string;
   enthusiasmLevel?: number;
+  coin: number,
   onIncrement?: () => void;
   onDecrement?: () => void;
+  onAddCoin?: () => void;
 }
 
 export default class Hello extends React.Component<Props, {}> {
@@ -13,7 +15,7 @@ export default class Hello extends React.Component<Props, {}> {
     super(props);
   }
   render() {
-    const { name, enthusiasmLevel = 1, onIncrement, onDecrement } = this.props;
+    const { name, enthusiasmLevel = 1,coin, onIncrement, onDecrement,onAddCoin } = this.props;
     const Img = require("../assets/images/game_01.png");
 
     if (enthusiasmLevel <= 0) {
@@ -28,6 +30,10 @@ export default class Hello extends React.Component<Props, {}> {
         <div>
           <button onClick={onDecrement}>-</button>
           <button onClick={onIncrement}>+</button>
+        </div>
+        <div>
+          <span className={style.greeting} >{coin}</span>
+        <button onClick={onAddCoin}>+</button>
         </div>
         <img src={Img} />
       </div>
